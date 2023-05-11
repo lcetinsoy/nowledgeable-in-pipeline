@@ -4,6 +4,6 @@ outputTests:
     - command: echo coucou
       includes:
         - coucou
-        - nownow
+        - nownow2
       excludes: []
 submissionUrl: https://nowledgeable.com/api/assessed-answer
