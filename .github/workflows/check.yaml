@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: echo $PATH
+    
+    steps:
+      - name: Checkout
+      uses: actions/checkout@v2
       - run: echo "folder=$(echo $PATH | cut -d ':' -f2)" >> $GITHUB_ENV
-      - run: echo $folder
-      - run: ls -la $folder
       - run: sudo wget https://nowledgeable.com/client/linux -O $folder/nowledgeable && sudo chmod +x $folder/nowledgeable
-      - run: ls -la
       - run: nowledgeable run-checks
     
