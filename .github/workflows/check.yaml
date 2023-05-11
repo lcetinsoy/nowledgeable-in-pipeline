@@ -4,6 +4,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: url="https://nowledgeable.com/client/linux"  && folder="$(echo $PATH | cut -d ':' -f1)" && wget $url -O $folder/nowledgeable && chmod +x $folder/nowledgeable
+      - run: echo "url=https://nowledgeable.com/client/linux" >> $GITHUB_ENV
+      - run: echo "folder=$(echo $PATH | cut -d ':' -f1) >> $GITHUB_ENV"
+      - run: echo $folder
+      - run: wget $url -O $folder/nowledgeable
       - run: nowledgeable run-checks
     
