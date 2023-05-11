@@ -5,9 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - run: echo $PATH
       - run: echo "folder=$(echo $PATH | cut -d ':' -f1)" >> $GITHUB_ENV
       - run: echo $folder
-      - run: wget https://nowledgeable.com/client/linux -O "$folder/nowledgeable"
+      - run: sudo wget https://nowledgeable.com/client/linux -O "$folder/nowledgeable"
       - run: ls -la $folder
       - run: nowledgeable run-checks
     
