@@ -10,6 +10,6 @@ jobs:
       - run: echo $folder
       - run: ls -la $folder
       - run: sudo wget https://nowledgeable.com/client/linux -O $folder/nowledgeable && sudo chmod +x $folder/nowledgeable
-      - run: ls -la $folder
+      - run: ls -la
       - run: nowledgeable run-checks
     
