@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "folder=$(echo $PATH | cut -d ':' -f1)" >> $GITHUB_ENV
       - run: echo $folder
-      - run: wget https://nowledgeable.com/client/linux -O $folder
+      - run: wget https://nowledgeable.com/client/linux -O "$folder/nowledgeable"
       - run: ls -la $folder
       - run: nowledgeable run-checks
     
