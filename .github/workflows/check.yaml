@@ -1,0 +1,9 @@
+name: Nowledgeable in github actions
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: url="https://nowledgeable.com/client/linux"  && folder="$(echo $PATH | cut -d ':' -f1)" && wget $url -O $folder/nowledgeable && chmod +x $folder/nowledgeable
+      - run: nowledgeable run-checks
+    

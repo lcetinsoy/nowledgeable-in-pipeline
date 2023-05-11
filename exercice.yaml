@@ -1,0 +1,9 @@
+activityId: ""
+type: InputOutputExercice
+outputTests:
+    - command: echo coucou
+      includes:
+        - coucou
+        - nownow
+      excludes: []
+submissionUrl: https://nowledgeable.com/api/assessed-answer
